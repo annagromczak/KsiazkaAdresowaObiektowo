@@ -18,13 +18,15 @@ class UzytkownikManager
     vector <Uzytkownik> uzytkownicy;
 
 private:
+    Uzytkownik podajDaneNowegoUzytkownika();
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
+    PlikZUzytkownikami plikZUzytkownikami;
 
 public:
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
-    Uzytkownik podajDaneNowegoUzytkownika();
+    void wczytajUzytkownikowZPliku();
 };
 
 #endif // UZYTKOWNIKMANAGER_H
