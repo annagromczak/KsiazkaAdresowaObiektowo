@@ -31,6 +31,7 @@ Uzytkownik UzytkownikManager::podajDaneNowegoUzytkownika()
     cin >> haslo;
     uzytkownik.ustawHaslo(haslo);
 
+    cin.ignore();
     return uzytkownik;
 }
 
@@ -91,16 +92,19 @@ int UzytkownikManager::logowanieUzytkownika()
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
                     idZalogowanegoUzytkownika = uzytkownicy[i].pobierzId();
+                    cin.ignore();
                     return idZalogowanegoUzytkownika;
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
             system("pause");
+            cin.ignore();
             return 0;
         }
     }
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
+    cin.ignore();
     return 0;
 }
 
@@ -120,10 +124,16 @@ void UzytkownikManager::zmianaHaslaZalogowanegoUzytkownika()
         }
     }
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+    cin.ignore();
 }
 
 int UzytkownikManager::wylogujUzytkownika()
 {
     idZalogowanegoUzytkownika = 0;
+    return idZalogowanegoUzytkownika;
+}
+
+int UzytkownikManager::pobierzIdZalogowanegoUzytkownika()
+{
     return idZalogowanegoUzytkownika;
 }

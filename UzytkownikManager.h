@@ -14,8 +14,8 @@ using namespace std;
 
 class UzytkownikManager
 {
-    int idZalogowanegoUzytkownika;
     vector <Uzytkownik> uzytkownicy;
+    int idZalogowanegoUzytkownika;
 
 private:
     Uzytkownik podajDaneNowegoUzytkownika();
@@ -31,6 +31,7 @@ public:
     int wylogujUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
+    int pobierzIdZalogowanegoUzytkownika();
 };
 
 #endif // UZYTKOWNIKMANAGER_H

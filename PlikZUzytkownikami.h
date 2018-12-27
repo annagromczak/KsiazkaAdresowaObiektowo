@@ -14,7 +14,6 @@ using namespace std;
 class PlikZUzytkownikami
 {
     const string nazwaPlikuZUzytkownikami;
- //   fstream plikTekstowy;
 
 private:
     bool czyPlikJestPusty(fstream &plikTekstowy);
