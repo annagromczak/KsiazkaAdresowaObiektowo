@@ -25,3 +25,13 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
     uzytkownikManager.wypiszWszystkichUzytkownikow();
 }
 
+void KsiazkaAdresowa::dodajAdresata()
+{
+    adresatManager.dodajAdresata(uzytkownikManager);
+}
+
+void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
+{
+    adresatManager.wczytajAdresatowZPliku(uzytkownikManager);
+    adresatManager.wyswietlWszystkichAdresatow();
+}
