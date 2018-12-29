@@ -6,28 +6,26 @@
 
 #include "PlikZAdresatami.h"
 #include "MetodyPomocnicze.h"
-#include "UzytkownikManager.h"
 
 using namespace std;
 
 class AdresatManager
 {
-    int idOstatniegoAdresata;
+    const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
     vector <Adresat> adresaci;
-
+    PlikZAdresatami plikZAdresatami;
 
 private:
-    Adresat podajDaneNowegoAdresata(int idZalogowanegoUzytkownika);
+    Adresat podajDaneNowegoAdresata();
     string wczytajLinie();
-    PlikZAdresatami plikZAdresatami;
     void wyswietlDaneAdresata(Adresat adresat);
 
 public:
-    AdresatManager(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami) {idOstatniegoAdresata = plikZAdresatami.pobierzZPlikuIdOstatniegoAdresata();};
-    int dodajAdresata(UzytkownikManager &uzytkownikManager);
-    void wczytajAdresatowZPliku(UzytkownikManager &uzytkownikManager);
-    void wyswietlWszystkichAdresatow();
+    AdresatManager(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika) : plikZAdresatami(nazwaPlikuZAdresatami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika)
+    {adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);};
 
+    void dodajAdresata();
+    void wyswietlWszystkichAdresatow();
 };
 
 #endif
