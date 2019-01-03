@@ -56,3 +56,21 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
         system("pause");
     }
 }
+
+void KsiazkaAdresowa::wyszukajAdresatowPoImieniu()
+{
+    adresatManager -> wyszukajAdresatowPoImieniu();
+}
+
+void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku()
+{
+    adresatManager -> wyszukajAdresatowPoNazwisku();
+}
+
+bool KsiazkaAdresowa::sprawdzCzyUzytkownikJestZalogowany()
+{
+    if (uzytkownikManager.pobierzIdZalogowanegoUzytkownika() == 0)
+        return true;
+    else
+        return false;
+}
