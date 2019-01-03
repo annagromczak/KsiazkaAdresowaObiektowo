@@ -5,6 +5,7 @@
 
 #include "UzytkownikManager.h"
 #include "AdresatManager.h"
+#include "MenuManager.h"
 
 using namespace std;
 
@@ -24,6 +25,8 @@ public:
            adresatManager = NULL;
         }
 
+    bool sprawdzCzyUzytkownikJestZalogowany();
+
     void rejestracjaUzytkownika();
     int logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
@@ -32,6 +35,9 @@ public:
 
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
+
 };
 
 #endif // KSIAZKAADRESOWA_H
