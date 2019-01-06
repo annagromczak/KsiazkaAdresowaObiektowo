@@ -4,16 +4,16 @@
 #include <iostream>
 #include <windows.h>
 
+#include "MetodyPomocnicze.h"
+
 using namespace std;
 
 class MenuManager
 {
-    static char wczytajZnak();
-
 public:
     static char wybierzOpcjeZMenuGlownego();
     static char wybierzOpcjeZMenuUzytkownika();
-
+    static char wybierzOpcjeZMenuEdycja();
 };
 
 #endif
