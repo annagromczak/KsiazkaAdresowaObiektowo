@@ -12,7 +12,7 @@ char MenuManager::wybierzOpcjeZMenuGlownego()
     cout << "9. Koniec programu" << endl;
     cout << "---------------------------" << endl;
     cout << "Twoj wybor: ";
-    wybor = wczytajZnak();
+    wybor = MetodyPomocnicze::wczytajZnak();
 
     return wybor;
 }
@@ -35,26 +35,26 @@ char MenuManager::wybierzOpcjeZMenuUzytkownika()
     cout << "8. Wyloguj sie" << endl;
     cout << "---------------------------" << endl;
     cout << "Twoj wybor: ";
-    wybor = wczytajZnak();
+    wybor = MetodyPomocnicze::wczytajZnak();
 
     return wybor;
 }
 
-char MenuManager::wczytajZnak()
+char MenuManager::wybierzOpcjeZMenuEdycja()
 {
-    string wejscie = "";
-    char znak  = {0};
+    char wybor;
 
-    while (true)
-    {
-        getline(cin, wejscie);
+    cout << endl << "   >>> MENU  EDYCJA <<<" << endl;
+    cout << "---------------------------" << endl;
+    cout << "Ktore dane zaktualizowac: " << endl;
+    cout << "1 - Imie" << endl;
+    cout << "2 - Nazwisko" << endl;
+    cout << "3 - Numer telefonu" << endl;
+    cout << "4 - Email" << endl;
+    cout << "5 - Adres" << endl;
+    cout << "6 - Powrot " << endl;
+    cout << endl << "Twoj wybor: ";
+    wybor = MetodyPomocnicze::wczytajZnak();
 
-        if (wejscie.length() == 1)
-        {
-            znak = wejscie[0];
-            break;
-        }
-        cout << "To nie jest pojedynczy znak. Wpisz ponownie." << endl;
-    }
-    return znak;
+    return wybor;
 }

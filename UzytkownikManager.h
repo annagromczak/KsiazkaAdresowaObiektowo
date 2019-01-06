@@ -32,7 +32,6 @@ public:
     int logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
     int wylogujUzytkownika();
-    void wypiszWszystkichUzytkownikow();
     int pobierzIdZalogowanegoUzytkownika();
     bool czyUzytkownikJestZalogowany();
 };
